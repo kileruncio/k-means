@@ -44,6 +44,7 @@ class K_Means:
     def predict(self, data):
         distances = [np.linalg.norm(data-self.centroids[centroid]) for centroid in self.centroids]
         classification = distances.index(min(distances))
+        print(distances)
         return classification
     
     def non_numeric_to_numeric(self, file):
